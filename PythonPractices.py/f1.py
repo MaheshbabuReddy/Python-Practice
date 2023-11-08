@@ -1,0 +1,7 @@
+f1=open("C://temp/java/file1.txt", "r+")
+f2= open("C://temp/java/file2.txt", "r+")
+#f = open("C://temp/java/file3.txt", "a")
+f1.readline()
+f2.readline()
+f1.close()
+f2.close()
