@@ -1,19 +1,20 @@
 class Solution(object):
-    def kthFactor(self, n ,k):
-        self.n=n
-        self.k=k
-        li=[]
-        for i in range(1,n+1):
-            if n % i == 0:
-                li.append(i)
-        for ele in range(len(li)):
-            if k-1 == ele :
-                return li[ele]
-        return -1
+    def maxArea(self, height):
+        left,right = 0, len(height)-1
+        max_area = 0
+        while left < right:
+            area = min(height[left],height[right]) * (right-left)
+            max_area= max(max_area,area)
 
-n=12
-k=3
-sol=Solution()
-s=sol.kthFactor(n,k)
-print(s)
+            if height[left] < height[right]:
+                left +=1
+            else:
+                 right -=1
+        return  max_area     
+    
+height=[1,1]
+sol = Solution()
+result = sol.maxArea(height)
+print(result)    
+
 
