@@ -3,8 +3,7 @@ class Solution:
         sen=''
         for word in s:
             if word.isalnum():
-                sen += word.lower()
-            
+                sen += word.lower()           
         i = 0
         j = len(sen)-1
         while i < j:
@@ -13,8 +12,6 @@ class Solution:
             i+= 1
             j-= 1
         return True
-    
-
 solution = Solution()
 s = "race a car"
 print(solution.isPalindrome(s))
